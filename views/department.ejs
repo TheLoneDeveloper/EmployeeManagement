@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/deptstyle.css"/>
+        <script type="text/javascript" src="js/deptcode.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href = "/home">Home</a>
+                <a href = "/employee">Employees</a>
+                <a href = "/department">Departments</a>
+            </nav>
+        </header>
+        <main>
+            <div id= "DTable">
+                <div id = "Button">
+                    <a href='/adddept' class="addButton">Add New</a><br>
+                </div>
+                <table id="deptTable">
+                    <thead>
+                        <tr class="header">
+                            <th>Department ID</th>
+                            <th>Department </th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                        <% dept.forEach(function(dep){ %>
+                            <tr>
+                                <td><%= dep.DeptID %></td>
+                                <td><%= dep.Department %></td>
+                                <td>
+                                    <a href="editdept/<%= dep.DeptID %>" class="btn btn-sm btn-primary">Edit</a>
+                                    <a href="deletedept/<%= dep.DeptID %>" class="btn btn-sm btn-danger">Delete</a>
+                                </td>
+                            </tr>
+                        <% }); %>
+                </table>
+            </div>
+        </main>
+    </body>
+</html>

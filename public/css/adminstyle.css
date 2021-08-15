@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
+html,body{
+    height: 100%;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #f0f3f6;
+    color: #212112;
+}
+
+header{
+    position: relative;
+    width: 100%;
+    top: 5%;
+    height: 5%;
+    background: dodgerblue;
+    box-shadow: 0 10px 30px 0 rgba(33,33,33,0.15);
+    display: flex;
+    -webkit-transition : all 0.3s ease-out;
+      transition : all 0.3s ease-out;
+  }
+
+header nav{
+    overflow: hidden;
+    background-color: dodgerblue;
+    padding: 0px 5px;
+    clear: right;
+}
+
+header nav a{
+    background-color: DodgerBlue;
+      float: left;
+      color: white;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      font-size: 17px;
+}
+
+header nav a:hover{
+    background-color: #149CFC;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/employeestyle.css"/>
+        <script type="text/javascript" src="js/empcode.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href = "/home">Home</a>
+                <a href = "/employee">Employees</a>
+                <a href = "/department">Departments</a>
+            </nav>
+        </header>
+        <main>
+            <div id = "ETable">
+                <span>Search:</span>
+                <input placeholder="Enter search term" type="text" onkeyup="searchETable()" id="searchEInput">
+                <a href='/adduser' class="addButton">Add New</a><br>
+                <table id="employeeTable">
+                    <thead>
+                        <tr class="header">
+                            <th>User ID</th>
+                            <th>Last Name</th>
+                            <th>First Name</th>
+                            <th>Department</th>
+                            <th>City</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                        <% employees.forEach(function(emp){ %>
+                            <tr>
+                                <td><%= emp.UserID %></td>
+                                <td><%= emp.lastname %></td>
+                                <td><%= emp.firstname %></td>
+                                <td><%= emp.department %></td>
+                                <td><%= emp.city %></td>
+                                <td>
+                                    <a href="edit/<%= emp.UserID %>" class="editButton">Edit</a>
+                                    <a href="delete/<%= emp.UserID %>" class="deleteButton">Delete</a>
+                                </td>
+                            </tr>
+                        <% }); %>
+                </table>
+            </div>
+        </main>
+    </body>
+</html>
