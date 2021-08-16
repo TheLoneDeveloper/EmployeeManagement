@@ -1,4 +1,6 @@
 .login-form {
+    position:relative;
+    padding-top: 12%;
     width: 300px;
     margin: 0 auto;
     font-family: Tahoma, Geneva, sans-serif;
@@ -20,7 +22,7 @@
 .login-form input[type="submit"] {
     width: 100%;
     padding: 15px;
-    background-color: #535b63;
+    background-color: dodgerblue;
     border: 0;
     box-sizing: border-box;
     cursor: pointer;

@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
+html,body{
+    height: 100%;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #f0f3f6;
+    color: #212112;
+}
+
+body form{
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+    position: relative;
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
+    top: 25%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    overflow: hidden;
+}
+
+body form div input{
+    border-radius: 25px;
+    border: 2px solid #212112;
+    padding: 5px;
+    font-family: 'Poppins';
+    box-shadow: 2px 2px 3px #665;
+    text-align: center;
+}
+
+.formGroup{
+    border-collapse: collapse;
+    font-size: 0.9em;
+    font-family: 'Poppins';
+    min-width: 400px;
+    padding:20px;
+    margin-left: 5%;
+}
+
+body form button{
+    position:relative;
+    border-radius: 25px;
+    border: 2px solid #212112;
+    padding: 5px;
+    font-family: 'Poppins';
+    box-shadow: 2px 2px 3px #665;
+    text-align: center;
+    margin-left: 45%;
+    margin-bottom: 10px;
+}
+
+body form button:hover{
+    background-color: #fff;
+    color: #212112;
+    cursor: pointer;
+}
+
+#addUID{
+    padding-right: 25px;
+}
+
+#addrole,
+#addcity,
+#adddept{
+    padding-left: 15px;
+}
+
+#addpassword{
+    padding-left: 15px;
+    padding-right: 20px;
+}
+
+#addlname{
+    padding-left: 15px;
+    padding-right: 10px;
+}
+

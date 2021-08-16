@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/adduser.css"/>
+    </head>
+    <body>
+        <form action = "/save" method = "POST">
+            <div class = "formGroup">
+                <span id = "addusername">Username:</span>
+                <input type = "text" class = formInput placeholder="Enter Username" name = "username" required>
+                <span id = "addpassword">Password:</span>
+                <input type = "text" class = formInput placeholder="Enter Password" name = "password" required>
+                <span id = "addrole">Role:</span>
+                <select name = "role">
+                    <option value = "admin">Admin</option>
+                    <option value = "user">User</option>
+                </select>
+            </div>
+            <div class = "formGroup">
+                <span id = "addfname">First name:</span>
+                <input type = "text" class = formInput placeholder="Enter First Name" name = "fname" required>
+                <span id = "addlname">Last Name:</span>
+                <input type = "text" class = formInput placeholder="Enter Last Name" name = "lname" required>
+            </div>
+            <div class = "formGroup">
+                <span id = "addUID">User ID:</span>
+                <input type = "text" class = formInput placeholder="Enter User ID" name = "UserID" required>
+                <span id = "adddept">Department:</span>
+                <input type = "text" class = formInput placeholder="Enter Department" name = "department" required>
+                <span id = "addcity">City:</span>
+                <input type = "text" class = formInput placeholder="Enter City" name = "city" required>
+            </div>
+            <button type = "submit">Submit</button>
+        </form>
+    </body>
+</html>

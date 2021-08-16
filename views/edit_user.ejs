@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/edituser.css"/>
+    </head>
+    <body>
+        <form action = "/update" method = "POST">
+            <div class = "formGroup1">
+                <input type="hidden" value= "<%= employee.UserID %>" name = "UserID">
+                <div id= "MyRole">
+                    <span id = "addrole">Role:</span>
+                    <select name = "role">
+                        <option value = "admin">Admin</option>
+                        <option value = "user">User</option>
+                    </select>
+                </div>
+            </div>
+            <div class = "formGroup">
+                <span id = "addfname">First name:</span>
+                <input type = "text" value = "<%= employee.firstname %>" name = "fname" required>
+                <span id = "addlname">Last Name:</span>
+                <input type = "text" value = "<%= employee.lastname %>" name = "lname" required>
+            </div>
+            <div class = "formGroup">
+                <span id = "adddept">Department:</span>
+                <input type = "text" value = "<%= employee.department %>" name = "department" required>
+                <span id = "addcity">City:</span>
+                <input type = "text" value = "<%= employee.city %>" name = "city" required>
+            </div>
+            <button type = "submit">Submit</button>
+        </form>
+    </body>
+</html>
