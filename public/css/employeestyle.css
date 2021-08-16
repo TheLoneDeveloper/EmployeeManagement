@@ -55,20 +55,6 @@ main{
     padding: 0
   }
 
-#ETable{
-    position: relative;
-    padding-top: 5%;
-}
-
-#Button{
-    margin-left: 10%;
-    margin-bottom: 12px;
-}
-
-#Button a{
-    margin-left: 15px;
-}
-
 
 #employeeTable{
     border-collapse: collapse;

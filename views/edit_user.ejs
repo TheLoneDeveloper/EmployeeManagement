@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="/css/edituser.css"/>
+        <link rel="stylesheet" type="text/css" href="css/edituser.css"/>
     </head>
     <body>
         <form action = "/update" method = "POST">
-            <div class = "formGroup1">
+            <div class = "formGroup">
                 <input type="hidden" value= "<%= employee.UserID %>" name = "UserID">
-                <div id= "MyRole">
-                    <span id = "addrole">Role:</span>
-                    <select name = "role">
-                        <option value = "admin">Admin</option>
-                        <option value = "user">User</option>
-                    </select>
-                </div>
+                <span id = "addrole">Role:</span>
+                <select name = "role">
+                    <option value = "admin">Admin</option>
+                    <option value = "user">User</option>
+                </select>
             </div>
             <div class = "formGroup">
                 <span id = "addfname">First name:</span>

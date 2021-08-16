@@ -31,27 +31,13 @@ body form div input{
     text-align: center;
 }
 
-.formGroup1{
-    border-collapse: collapse;
-    font-size: 0.9em;
-    font-family: 'Poppins';
-    min-width: 400px;
-    padding:20px;
-    margin-left: 5%;
-}
-
 .formGroup{
     border-collapse: collapse;
     font-size: 0.9em;
     font-family: 'Poppins';
     min-width: 400px;
     padding:20px;
-    margin-left: 15%;
-}
-
-#MyRole{
-    position: relative;
-    margin-left: 40%;
+    margin-left: 5%;
 }
 
 body form button{
@@ -73,15 +59,19 @@ body form button:hover{
 }
 
 
+#addrole,
+#addcity,
+#adddept{
+    padding-left: 15px;
+}
+
+#addpassword{
+    padding-left: 15px;
+    padding-right: 20px;
+}
+
 #addlname{
-    padding-left: 25px;
+    padding-left: 15px;
+    padding-right: 10px;
 }
 
-#addcity{
-    padding-left: 22px;
-    margin-right: 50px;
-}
-
-#addfname{
-    margin-right: 10px;
-}

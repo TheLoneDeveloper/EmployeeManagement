@@ -52,25 +52,14 @@ app.post('/auth', function(request, response) {
 
 app.get('/home', function(request, response) {
 	if (request.session.loggedin) {
-		connection.query('SELECT * FROM `login credentials` WHERE username = ?',[request.session.username], function(error,results,fields){
+		connection.query('SELECT role FROM `login credentials` WHERE username = ?',[request.session.username], function(error,results,fields){
 			var userrole = results[0].role;
-			var ID = results[0].UserID;
 			if(userrole == "admin"){
-				connection.query('SELECT * FROM `employee details` WHERE UserID = ?', [ID],function(err,res,fields){
-					if (err) throw err;
-					response.render('admin',{
-						employee : res
-					});
-				})
+				response.sendFile((path.join(__dirname + '/admin.html')));
 			}
 			else
 			{
-				connection.query('SELECT * FROM `employee details` WHERE UserID = ?', [ID],function(err,res,fields){
-					if (err) throw err;
-					response.render('user',{
-						employee : res
-					});
-				})
+				response.sendFile(path.join((__dirname + '/user.html')));
 			}
 		});
 	} else {
@@ -81,26 +70,6 @@ app.get('/home', function(request, response) {
 
 app.set('views', path.join(__dirname,'views'));
 app.set('view engine', 'ejs');
-
-app.get('/editProfile/:UserID', (req,res)=>{
-	const UserID = req.params.UserID;
-	let sql = 'SELECT * FROM `employee details` WHERE UserID = ?'
-	connection.query(sql, UserID, (err, results)=>{
-		if (err) throw err;
-		res.render('edit_profile',{
-			employee: results[0]
-		})
-	})
-})
-app.post('/updateProfile', (req,res)=>{
-	const UserID = req.body.UserID;
-	let sql = "UPDATE `employee details` SET lastname=(?), firstname =(?), department = (?), city = (?) WHERE UserID = (?)";
-	connection.query(sql, [req.body.lname, req.body.fname, req.body.department, req.body.city, UserID], (err, results)=>{
-		if (err) throw err;
-		res.redirect('/home');
-
-	})
-});
 
 app.get('/employee',function(req, res){
 	connection.query('SELECT * FROM `employee details`', function (err, results){
